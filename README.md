@@ -12,10 +12,10 @@ Para solucionar este problema deveremos cambiar algunos premisos desde el propio
     $ setfacl -m "default:user::rwx" <directory>
     $ setfacl -m "default:user:3000000:rwx" <directory>
     $ setfacl -m "default:group::r-x" <directory>
-    $ setfacl -m "default:group:users:r-x" <directori>
-    $ setfacl -m "default:mask::rwx" <directori>
-    $ setfacl -m "default:other::r-x" <directori>
-    $ sudo chown 3000000:users <directori>
+    $ setfacl -m "default:group:users:r-x" <directory>
+    $ setfacl -m "default:mask::rwx" <directory>
+    $ setfacl -m "default:other::r-x" <directory>
+    $ sudo chown 3000000:users <directory>
         
 Para comprender el error debemos primero entender que al crear una carpeta desde Windows con la herramienta RSAT el permiso asignado es 'drwxrwsr-x+'donde el + nos indica que hay permisos ACL asignados.
 
